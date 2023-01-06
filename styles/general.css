@@ -1,0 +1,69 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  font-family: "Bai Jamjuree", sans-serif;
+
+  background-image: url(/images/background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.container-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+input,
+button {
+  outline: none;
+  appearance: none;
+  border: none;
+
+  font-family: inherit;
+  font-size: 1.8rem;
+}
+
+input[type="text"] {
+  padding: 2rem;
+  font-size: 1.8rem;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+input[type="text"]::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+button {
+  font-weight: 500;
+  background-color: #ff3434;
+  color: white;
+  cursor: pointer;
+}
+
+footer {
+  color: #ff3434;
+  margin-bottom: 2.4rem;
+}
+
+.copyright-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+}

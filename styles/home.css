@@ -1,0 +1,86 @@
+.header-container {
+  margin-top: 2.4rem;
+}
+
+.header {
+  display: flex;
+}
+
+form {
+  max-width: 60%;
+  flex: 1;
+  display: flex;
+  gap: 1rem;
+
+  margin-right: auto;
+}
+
+.search-input {
+  flex: 1;
+}
+
+.btn-search {
+  padding: 0 3.2rem;
+}
+
+.logo {
+  height: 7.2rem;
+  cursor: pointer;
+}
+
+.main h1 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.main p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  color: rgb(180, 180, 180);
+  max-width: 60%;
+  text-align: justify;
+}
+
+.image-grid-container {
+  flex: 1;
+  /* max-height: 500px; */
+}
+
+.image-grid {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 3fr;
+}
+
+.image-grid div {
+  cursor: pointer;
+}
+
+#img-01 {
+  background-image: url(/images/superman.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#img-02 {
+  opacity: 0.6;
+  background-image: url(/images/ironman.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#img-03 {
+  opacity: 0.4;
+  background-image: url(/images/aquaman.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#img-04 {
+  opacity: 0.2;
+  background-image: url(/images/captain.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
