@@ -25,7 +25,7 @@ body {
 }
 
 .container-inner {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -43,7 +43,7 @@ input[type="text"] {
   padding: 2rem;
   font-size: 1.8rem;
   background-color: transparent;
-  border: 2px solid white;
+  border: 1px solid white;
   color: white;
 }
 
@@ -55,7 +55,18 @@ button {
   font-weight: 500;
   background-color: #ff3434;
   color: white;
-  cursor: pointer;
+}
+
+.cur-p {
+  cursor: url("/images/link.cur"), auto;
+}
+
+.cur-a {
+  cursor: url("/images/arrow.cur"), auto;
+}
+
+.cur-i {
+  cursor: url("/images/text.cur"), auto;
 }
 
 footer {
@@ -64,6 +75,7 @@ footer {
 }
 
 .copyright-text {
+  text-align: center;
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
 }

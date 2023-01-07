@@ -7,12 +7,11 @@
 }
 
 form {
-  max-width: 60%;
   flex: 1;
   display: flex;
   gap: 1rem;
 
-  margin-right: auto;
+  margin-bottom: 3.2rem;
 }
 
 .search-input {
@@ -25,7 +24,12 @@ form {
 
 .logo {
   height: 7.2rem;
-  cursor: pointer;
+}
+
+.main-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
 }
 
 .main h1 {
@@ -37,50 +41,12 @@ form {
 .main p {
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
-  color: rgb(180, 180, 180);
-  max-width: 60%;
+  line-height: 1.4;
   text-align: justify;
-}
 
-.image-grid-container {
-  flex: 1;
-  /* max-height: 500px; */
-}
-
-.image-grid {
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 2fr 3fr;
-}
-
-.image-grid div {
-  cursor: pointer;
-}
-
-#img-01 {
-  background-image: url(/images/superman.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-#img-02 {
-  opacity: 0.6;
-  background-image: url(/images/ironman.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-#img-03 {
-  opacity: 0.4;
-  background-image: url(/images/aquaman.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-#img-04 {
-  opacity: 0.2;
-  background-image: url(/images/captain.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: linear-gradient(to top, rgb(36, 36, 36), #fff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  clip: text;
+  -webkit-text-fill-color: transparent;
 }
