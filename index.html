@@ -6,15 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Superhero DB &mdash; Largest superhero library</title>
 
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600&family=Roboto:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
 
     <link rel="stylesheet" href="/styles/general.css" />
     <link rel="stylesheet" href="/styles/home.css" />
+    <link rel="stylesheet" href="/styles/hero-info.css" />
   </head>
   <body class="cur-a">
     <section class="header-container">
@@ -25,29 +28,116 @@
 
     <section class="main-container">
       <div class="container-inner main">
-        <form>
+        <p id="website-description" class="gradient-text">
+          Get all SuperHeroes and Villians data from all universes under a
+          single and user-friendly website.
+        </p>
+        <form id="search-form">
           <input
+            id="search-input"
             class="search-input cur-i"
             type="text"
             placeholder="Search superhero"
             autocomplete="off"
+            autofocus
           />
-          <button class="btn-search cur-p" type="submit">Search</button>
+          <label
+            id="search-suggestions-count"
+            class="search-suggestions-count"
+            for="search-suggestions"
+            >Search results: 0</label
+          >
+          <button id="btn-search" class="btn-search cur-p" type="submit">
+            Search
+          </button>
         </form>
-        <h1>What is Superhero db v1.0?</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure nulla
-          numquam reprehenderit quo saepe ipsa provident quasi corrupti magni
-          soluta quas, quidem, adipisci aliquam magnam reiciendis obcaecati enim
-          hic accusamus? Tempora assumenda consequuntur laudantium et expedita
-          earum quidem praesentium recusandae obcaecati quae, harum ducimus
-          suscipit maiores corrupti similique illum dolorem, maxime porro unde
-          distinctio cumque architecto voluptatem? Hic, est molestias.
-        </p>
+        <ul id="search-suggestions" class="search-suggestions"></ul>
       </div>
     </section>
-    <footer>
+
+    <section id="hero-info-popup" class="hero-info-container">
+      <div class="hero">
+        <button id="btn-close" class="btn-close cur-p">
+          <img class="btn-icon" src="/images/icon-close.png" alt="close-icon" />
+        </button>
+        <h1 id="hero-name" class="hero-name">Batman</h1>
+        <p id="description" class="hero-description gradient-text">
+          Batman is the superhero protector of Gotham City, a tortured, brooding
+          vigilante dressed as a bat who fights against evil and strikes fear
+          into the hearts of criminals everywhere. In his public identity, he is
+          Bruce Wayne, a billionaire industrialist and notorious playboy.
+          Although he has no superhuman abilities, he is one of the world's
+          smartest men and greatest fighters. His physical prowess, technical
+          ingenuity, and tactical thinking make him an incredibly dangerous
+          opponent. He is also a founding member of the Justice League.
+        </p>
+        <ul class="hero-info-list">
+          <li id="real-name"><span>Real name:</span> Bruce Thomas Wayne</li>
+          <li id="aliases">
+            <span>Aliases:</span> Jack Shaw, Matches Malone, Doctor Fate
+          </li>
+          <li id="occupation"><span>Occupation:</span> Businessman</li>
+          <li id="publisher"><span>Publisher:</span> DC comics</li>
+          <li id="race"><span>Race:</span> Prime Earth</li>
+          <li id="alignment"><span>Alignment:</span> Good</li>
+          <li id="marital-status"><span>Marital status:</span> Single</li>
+        </ul>
+
+        <div class="hero-stats-container">
+          <div class="stats">
+            <img
+              class="stat-icon"
+              src="images/brain-icon.png"
+              alt="brain-icon"
+            />
+            <div class="">
+              <p id="intelligence">100/100</p>
+              <p>Intelligence</p>
+            </div>
+          </div>
+          <div class="stats">
+            <img
+              class="stat-icon"
+              src="images/strength-icon.png"
+              alt="brain-icon"
+            />
+            <div class="">
+              <p id="strength">50/100</p>
+              <p>Strength</p>
+            </div>
+          </div>
+          <div class="stats">
+            <img
+              class="stat-icon"
+              src="images/speed-icon.png"
+              alt="brain-icon"
+            />
+            <div class="">
+              <p id="speed">30/100</p>
+              <p>Speed</p>
+            </div>
+          </div>
+          <div class="stats">
+            <img
+              class="stat-icon"
+              src="images/combat-icon.png"
+              alt="brain-icon"
+            />
+            <div class="">
+              <p id="combat">10/100</p>
+              <p>Combat</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="hero-image-container" class="hero-image-container">
+        <p>No image found</p>
+        <div id="hero-image" class="hero-image"></div>
+      </div>
+    </section>
+    <footer id="footer">
       <p class="container-inner copyright-text">Copyright 2023 | Yasir Ahmed</p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

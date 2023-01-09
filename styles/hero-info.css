@@ -1,0 +1,224 @@
+.hero-info-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateX(100vw);
+  z-index: 100;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  box-shadow: -10px 0px 50px rgba(0, 0, 0, 0.6);
+
+  transition: transform 1s ease-in;
+}
+
+.hero {
+  height: 100%;
+  position: relative;
+  padding: 5rem;
+  background-color: #111216;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn-close {
+  width: 8rem;
+  height: 8rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  padding: 2.4rem;
+  border: 1.5px solid transparent;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-close:hover {
+  border-color: white;
+}
+
+.hero-name {
+  width: 100%;
+  font-size: 7.2rem;
+  font-weight: 500;
+}
+
+.hero-description {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+
+  margin-bottom: 2.4rem;
+}
+
+.hero-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  list-style-type: none;
+
+  margin-bottom: 3.2rem;
+}
+
+.hero-info-list li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 1.6rem;
+  padding-bottom: 5px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.hero-info-list li:last-child {
+  border-bottom: none;
+}
+
+.hero-info-list li span {
+  font-weight: 600;
+  color: white;
+}
+
+.hero-stats-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.stats {
+  flex: 1;
+  opacity: 0.5;
+  display: flex;
+  font-size: 1.4rem;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 1.8rem;
+
+  border: 1.5px solid rgba(255, 255, 255);
+  transition: opacity 0.3s ease-in-out;
+}
+
+.stat-icon {
+  height: 3.5rem;
+}
+
+.stats:hover {
+  opacity: 1;
+}
+
+.hero-image-container {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url(/images/batman-background.png);
+}
+
+.hero-image-container p {
+  position: absolute;
+  left: 0;
+  right: 0;
+  font-size: 1.8rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.hero-image {
+  z-index: 100;
+  height: 70%;
+  width: 70%;
+
+  background-image: url(/images/batman-background.png);
+}
+
+.hero-image-container,
+.hero-image {
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+@media only screen and (max-width: 750px) {
+  .hero-info-container {
+    grid-template-columns: unset;
+    grid-template-rows: 1fr 1fr;
+
+    transition: transform 1s ease-in-out;
+  }
+
+  .hero {
+    grid-row: 2;
+    padding: 2rem 1.5rem;
+    justify-content: flex-start;
+  }
+
+  .hero-image-container {
+    position: relative;
+    grid-row: 1;
+    height: 70vh;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .btn-close {
+    position: fixed;
+    top: 2.4rem;
+    left: 2.4rem;
+    z-index: 900;
+
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1.5px solid transparent;
+
+    height: 6rem;
+    width: 6rem;
+    padding: 1.3rem;
+  }
+
+  .hero-name {
+    font-size: 4.2rem;
+  }
+
+  .hero-description {
+    font-size: 1.6rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .external-link-btn {
+    height: 2.2rem;
+  }
+
+  .hero-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    list-style-type: none;
+
+    margin-bottom: 1.8rem;
+  }
+
+  .hero-info-list li span {
+    font-weight: 500;
+  }
+
+  .hero-stats-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .stats {
+    padding: 1.8rem 1.5rem;
+  }
+}
